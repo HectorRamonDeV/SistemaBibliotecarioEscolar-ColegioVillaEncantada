@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <!--no borrar barra superior-->
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <!-- Ruta Css -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" th:href="@{/styles.css}">
     <!-- CDN Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
     <header class="shadow">
         <nav class="navbar navbar-expand-md px-4">
             <div class="d-flex align-items-center">
-                <img src="img/logo-CVE.png" width="60" alt="logo">
+                <img th:src="@{/img/logo-CVE.png}" width="60" alt="logo">
                 <h2 class="c-principal ms-2 m-0 fw-bold">Biblioteca</h2>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -35,16 +35,16 @@
                 <ul class="navbar-nav">
                    
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="about.html">Nosotros</a>
+                        <a class="nav-link c-principal" th:href="@{/about}">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="schedules.html">Horarios</a>
+                        <a class="nav-link c-principal" th:href="@{/schedules}">Horarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="news.html">Noticias</a>
+                        <a class="nav-link c-principal" th:href="@{/news}">Noticias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="login.html">Iniciar Sesión</a>
+                        <a class="nav-link c-principal" th:href="@{/login}">Iniciar SesiÃ³n</a>
                     </li>
                 </ul>
             </div>
@@ -59,13 +59,13 @@
                         Reserva <br> de Libros
                     </h1>
                     <p class="c-principal opacity-75">
-                        Solicita libros de manera online y recógelo desde <br class="d-none d-md-block">
+                        Solicita libros de manera online y recÃ³gelo desde <br class="d-none d-md-block">
                         nuestras biblioteca del Colegio Cambridge
                     </p>
                     <button class="btn-1">Solicitar Ahora</button>
                 </div>
                 <div class="col-12 col-md-6 text-center text-md-end">
-                    <img src="img/img-hero.png" class="img-fluid hero-img" alt="img-hero-index">
+                    <img th:src="@{/img/img-hero.png}" class="img-fluid hero-img" alt="img-hero-index">
                 </div>
             </div>
         </section>
@@ -75,37 +75,37 @@
         <section class="carrusel">
             <div class="slider">
                 <div class="slide-track">
-                    <div class="slide"><img src="img/img-logo1-carrusel.png" /></div>
-                    <div class="slide"><img src="img/img-logo2-carrusel.png" /></div>
-                    <div class="slide"><img src="img/img-logo3-carrusel.png" /></div>
-                    <div class="slide"><img src="img/img-logo4-carrusel.png" /></div>
-                    <div class="slide"><img src="img/img-logo5-carrusel.png" /></div>
-                    <div class="slide"><img src="img/img-logo6-carrusel.png" /></div>
-                    <div class="slide"><img src="img/img-logo7-carrusel.png" /></div>
-                    <div class="slide"><img src="img/img-logo8-carrusel.png" /></div>
+                    <div class="slide"><img th:src="@{/img/img-logo1-carrusel.png}" /></div>
+                    <div class="slide"><img th:src="@{/img/img-logo2-carrusel.png}" /></div>
+                    <div class="slide"><img th:src="@{/img/img-logo3-carrusel.png}" /></div>
+                    <div class="slide"><img th:src="@{/img/img-logo4-carrusel.png}" /></div>
+                    <div class="slide"><img th:src="@{/img/img-logo5-carrusel.png}" /></div>
+                    <div class="slide"><img th:src="@{/img/img-logo6-carrusel.png}" /></div>
+                    <div class="slide"><img th:src="@{/img/img-logo7-carrusel.png}" /></div>
+                    <div class="slide"><img th:src="@{/img/img-logo8-carrusel.png}" /></div>
                 </div>
             </div>
         </section>
         <section class="categoriaLibros pt-5">
             <div class="row justify-content-center">
                 <div class="col-10 col-md-6 col-lg-3 text-center">
-                    <img src="img/img-libro1-index.png" alt="" class="img-card-libro">
+                    <img th:src="@{/img/img-libro1-index.png}" alt="" class="img-card-libro">
                     <div class="pt-4 c-principal px-3">
                         <h4>Libros de Literatura</h4>
                         <p class="opacity-75">Contamos con libros de literatura, totalmente exitosos en el mundo.</p>
                     </div>
                 </div>
                 <div class="col-10 col-md-6 col-lg-3 text-center">
-                    <img src="img/img-libro2-index.png" alt="" class="img-card-libro">
+                    <img th:src="@{/img/img-libro2-index.png}" alt="" class="img-card-libro">
                     <div class="pt-4 c-principal px-3">
                         <h4>Libros de Universales</h4>
-                        <p class="opacity-75">Tenemos los libros con las historias universales mas increíbles. </p>
+                        <p class="opacity-75">Tenemos los libros con las historias universales mas increÃ­bles. </p>
                     </div>
                 </div>
                 <div class="col-10 col-md-6 col-lg-3 text-center">
-                    <img src="img/img-libro4-index.png" alt="" class="img-card-libro">
+                    <img th:src="@{/img/img-libro4-index.png}" alt="" class="img-card-libro">
                     <div class="pt-4 c-principal px-3">
-                        <h4>Libros sobre el Perú</h4>
+                        <h4>Libros sobre el PerÃº</h4>
                         <p class="opacity-75">Estos libros cuentan historias peruanas basadas en hechos reales.</p>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
             <div class="row gy-4">
                 <div class="col-12 col-md-4 d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
 
-                    <div class="footer-logo mb-3"> <img src="img/logo-CVE.png" alt="Logo Colegio Villa Encantada">
+                    <div class="footer-logo mb-3"> <img th:src="@{/img/logo-CVE.png}" alt="Logo Colegio Villa Encantada">
                     </div>
 
                     <div class="d-flex gap-3 align-items-center"> <a href="#" class="text-decoration-none"> <svg
@@ -148,17 +148,17 @@
                 </div>
 
                 <div class="col-12 col-md-4 text-center text-md-start">
-                    <h2>Políticas y Privacidad</h2>
+                    <h2>PolÃ­ticas y Privacidad</h2>
                     <span>Libro de Reclamaciones</span>
                     <span>Libro de Incidencias</span>
                     <span>Reglamento de la Biblioteca</span>
-                    <span>Términos y Condiciones</span>
+                    <span>TÃ©rminos y Condiciones</span>
                 </div>
 
                 <div class="col-12 col-md-4 text-center text-md-start">
                     <h2>Contactos</h2>
                     <p>Rocas 2599, San Juan de Lurigancho 15434</p>
-                    <p>Teléfono: 987654321</p>
+                    <p>TelÃ©fono: 987654321</p>
                     <p>bibliotrca@gmail.com</p>
                 </div>
 

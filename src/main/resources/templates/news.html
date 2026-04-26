@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- Ruta Css -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" th:href="@{/styles.css}">
     <!-- CDN Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
         <header class="shadow">
         <nav class="navbar navbar-expand-md px-4">
             <div class="d-flex align-items-center">
-                <img src="img/logo-CVE.png" width="60" alt="logo">
+                <img th:src="@{/img/logo-CVE.png}" width="60" alt="logo">
                 <h2 class="c-principal ms-2 m-0 fw-bold">Biblioteca</h2>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -27,19 +27,19 @@
             <div class="collapse navbar-collapse justify-content-end" id="menu">
                 <ul class="navbar-nav">
                      <li class="nav-item">
-                        <a class="nav-link c-principal" href="index.html">Inicio</a>
+                        <a class="nav-link c-principal" th:href="@{/}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="about.html">Nosotros</a>
+                        <a class="nav-link c-principal" th:href="@{/about}">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="schedules.html">Horarios</a>
+                        <a class="nav-link c-principal" th:href="@{/schedules}">Horarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="news.html">Noticias</a>
+                        <a class="nav-link c-principal" th:href="@{/news}">Noticias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="login.html">Iniciar Sesión</a>
+                        <a class="nav-link c-principal" th:href="@{/login}">Iniciar SesiÃ³n</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
     <main class="pb-5">
     <section id="noticias" class="noticias-section">
     <div class="container">
-        <h2 class="titulo-noticias">Últimas Noticias</h2>
+        <h2 class="titulo-noticias">Ãšltimas Noticias</h2>
 
         <div class="noticias-grid">
 
@@ -62,7 +62,7 @@
                     <span class="fecha">20 Abril 2026</span>
                     <h3>Feria del Libro Escolar</h3>
                     <p>
-                        Nuestra biblioteca realizó con éxito la feria anual
+                        Nuestra biblioteca realizÃ³ con Ã©xito la feria anual
                         promoviendo la lectura entre los estudiantes.
                     </p>
                 </div>
@@ -75,7 +75,7 @@
                     <span class="fecha">18 Abril 2026</span>
                     <h3>Nuevos Libros Disponibles</h3>
                     <p>
-                        Se incorporaron más de 200 nuevos libros para
+                        Se incorporaron mÃ¡s de 200 nuevos libros para
                         fortalecer el aprendizaje estudiantil.
                     </p>
                 </div>
@@ -86,9 +86,9 @@
 
                 <div class="noticia-contenido">
                     <span class="fecha">10 Abril 2026</span>
-                    <h3>Taller de Investigación</h3>
+                    <h3>Taller de InvestigaciÃ³n</h3>
                     <p>
-                        Se desarrolló un taller dirigido a estudiantes para
+                        Se desarrollÃ³ un taller dirigido a estudiantes para
                         mejorar sus habilidades investigativas.
                     </p>
                 </div>
@@ -105,7 +105,7 @@
             <div class="row gy-4">
                 <div class="col-12 col-md-4 d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
 
-                    <div class="footer-logo mb-3"> <img src="img/logo-CVE.png" alt="Logo Colegio Villa Encantada">
+                    <div class="footer-logo mb-3"> <img th:src="@{/img/logo-CVE.png}" alt="Logo Colegio Villa Encantada">
                     </div>
 
                     <div class="d-flex gap-3 align-items-center"> <a href="#" class="text-decoration-none"> <svg
@@ -135,17 +135,17 @@
                 </div>
 
                 <div class="col-12 col-md-4 text-center text-md-start">
-                    <h2>Políticas y Privacidad</h2>
+                    <h2>PolÃ­ticas y Privacidad</h2>
                     <span>Libro de Reclamaciones</span>
                     <span>Libro de Incidencias</span>
                     <span>Reglamento de la Biblioteca</span>
-                    <span>Términos y Condiciones</span>
+                    <span>TÃ©rminos y Condiciones</span>
                 </div>
 
                 <div class="col-12 col-md-4 text-center text-md-start">
                     <h2>Contactos</h2>
                     <p>Rocas 2599, San Juan de Lurigancho 15434</p>
-                    <p>Teléfono: 987654321</p>
+                    <p>TelÃ©fono: 987654321</p>
                     <p>bibliotrca@gmail.com</p>
                 </div>
 
