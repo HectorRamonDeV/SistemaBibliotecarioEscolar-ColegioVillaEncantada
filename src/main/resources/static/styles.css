@@ -206,10 +206,6 @@ footer svg:hover {
     }
 }
 
-<<<<<<< Updated upstream
-/*Estilos Noticias*/
-=======
->>>>>>> Stashed changes
 /*Estilos Login*/
 .login-container {
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
@@ -317,8 +313,7 @@ h1 {
 .btn-iniciar:hover {
     background-color: white;
     transform: translateY(-2px);
-<<<<<<< Updated upstream
-=======
+
 }
 
 /*Estilos nosotros*/
@@ -628,5 +623,4 @@ h1 {
         flex-direction: column;
         text-align: center;
     }
->>>>>>> Stashed changes
 }
