@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -39,7 +39,7 @@
                         <a class="nav-link c-principal" th:href="@{/news}">Noticias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" th:href="@{/login}">Iniciar SesiÃ³n</a>
+                        <a class="nav-link c-principal" th:href="@{/login}">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
@@ -51,44 +51,44 @@
     <main class="pb-5">
     <section id="noticias" class="noticias-section">
     <div class="container">
-        <h2 class="titulo-noticias">Ãšltimas Noticias</h2>
+        <h2 class="titulo-noticias">Últimas Noticias</h2>
 
         <div class="noticias-grid">
 
             <div class="noticia-card">
-                <img src="/img/img-noticia1.png" alt="Noticia 1">
+                <img th:src="@{/img/img-noticia1.png}" alt="Noticia 1">
 
                 <div class="noticia-contenido">
                     <span class="fecha">20 Abril 2026</span>
                     <h3>Feria del Libro Escolar</h3>
                     <p>
-                        Nuestra biblioteca realizÃ³ con Ã©xito la feria anual
+                        Nuestra biblioteca realizó con éxito la feria anual
                         promoviendo la lectura entre los estudiantes.
                     </p>
                 </div>
             </div>
 
             <div class="noticia-card">
-                <img src="/img/img-noticia2.jpg" alt="Noticia 2">
+                <img th:src="@{/img/img-noticia2.jpg}" alt="Noticia 2">
 
                 <div class="noticia-contenido">
                     <span class="fecha">18 Abril 2026</span>
                     <h3>Nuevos Libros Disponibles</h3>
                     <p>
-                        Se incorporaron mÃ¡s de 200 nuevos libros para
+                        Se incorporaron más de 200 nuevos libros para
                         fortalecer el aprendizaje estudiantil.
                     </p>
                 </div>
             </div>
 
             <div class="noticia-card">
-                <img src="/img/img-noticia3.png" alt="Noticia 3">
+                <img th:src="@{/img/img-noticia3.png}" alt="Noticia 3">
 
                 <div class="noticia-contenido">
                     <span class="fecha">10 Abril 2026</span>
-                    <h3>Taller de InvestigaciÃ³n</h3>
+                    <h3>Taller de Investigación</h3>
                     <p>
-                        Se desarrollÃ³ un taller dirigido a estudiantes para
+                        Se desarrolló un taller dirigido a estudiantes para
                         mejorar sus habilidades investigativas.
                     </p>
                 </div>
@@ -135,17 +135,17 @@
                 </div>
 
                 <div class="col-12 col-md-4 text-center text-md-start">
-                    <h2>PolÃ­ticas y Privacidad</h2>
+                    <h2>Políticas y Privacidad</h2>
                     <span>Libro de Reclamaciones</span>
                     <span>Libro de Incidencias</span>
                     <span>Reglamento de la Biblioteca</span>
-                    <span>TÃ©rminos y Condiciones</span>
+                    <span>Términos y Condiciones</span>
                 </div>
 
                 <div class="col-12 col-md-4 text-center text-md-start">
                     <h2>Contactos</h2>
                     <p>Rocas 2599, San Juan de Lurigancho 15434</p>
-                    <p>TelÃ©fono: 987654321</p>
+                    <p>Teléfono: 987654321</p>
                     <p>bibliotrca@gmail.com</p>
                 </div>
 
