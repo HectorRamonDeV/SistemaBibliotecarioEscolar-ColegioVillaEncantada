@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <!-- Ruta Css -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" th:href="@{/styles.css}">
     <!-- CDN Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +25,10 @@
     <main class="login-container">
         <section class="login-card">
             <div class="header-card text-center">
-                <a href="index.html" class="btn-atras text-decoration-none text-center">ATRAS</a>
+                <a th:href="@{/}" class="btn-atras text-decoration-none text-center">ATRAS</a>
             </div>
             <div class="login-info">
-                <img src="img/logo-CVE.png" alt="Logo Colegio" class="logo-login">
+                <img th:src="@{/img/logo-CVE.png}" alt="Logo Colegio" class="logo-login">
                 <h1 class="text-light">Sistema <br> Bibliotecario</h1>
                 <p class="text-light opacity-75">Accede con tus credenciales a tu perfil</p>
             </div>

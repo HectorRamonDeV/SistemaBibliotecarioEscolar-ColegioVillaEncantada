@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticia</title>
+    <title>Nosotros</title>
     <!-- CDN Booostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <!-- Ruta Css -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" th:href="@{/styles.css}">
     <!-- CDN Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-        <header class="shadow">
+    <header class="shadow">
         <nav class="navbar navbar-expand-md px-4">
             <div class="d-flex align-items-center">
-                <img src="img/logo-CVE.png" width="60" alt="logo">
+                <img th:src="@{/img/logo-CVE.png}" width="60" alt="logo">
                 <h2 class="c-principal ms-2 m-0 fw-bold">Biblioteca</h2>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -26,86 +33,98 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="menu">
                 <ul class="navbar-nav">
-                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="index.html">Inicio</a>
+                    <li class="nav-item">
+                        <a class="nav-link c-principal" th:href="@{/}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="about.html">Nosotros</a>
+                        <a class="nav-link c-principal" th:href="@{/about}">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="schedules.html">Horarios</a>
+                        <a class="nav-link c-principal" th:href="@{/schedules}">Horarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="news.html">Noticias</a>
+                        <a class="nav-link c-principal" th:href="@{/news}">Noticias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c-principal" href="login.html">Iniciar Sesión</a>
+                        <a class="nav-link c-principal" th:href="@{/login}">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
 
         </nav>
     </header>
-    
 
     <main class="pb-5">
-    <section id="noticias" class="noticias-section">
-    <div class="container">
-        <h2 class="titulo-noticias">Últimas Noticias</h2>
+        <section id="nosotros" class="nosotros-section container-fluid py-5">
+            <div class="nosotros-contenido">
+                <div class="nosotros-imagen">
+                    <img th:src="@{/img/img-biblioteca-inferior.jpg}" alt="Biblioteca Escolar">
+                </div>
 
-        <div class="noticias-grid">
-
-            <div class="noticia-card">
-                <img src="/img/img-noticia1.png" alt="Noticia 1">
-
-                <div class="noticia-contenido">
-                    <span class="fecha">20 Abril 2026</span>
-                    <h3>Feria del Libro Escolar</h3>
+                <div class="nosotros-texto">
+                    <h2>Sobre Nuestra Biblioteca</h2>
                     <p>
-                        Nuestra biblioteca realizó con éxito la feria anual
-                        promoviendo la lectura entre los estudiantes.
+                        Buscamos innovar y mejorar constantemente nuestros servicios para toda
+                        la comunidad educativa mediante:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>Buscador Web 24/7:</strong> Un catálogo digital moderno
+                            que permite a estudiantes y maestros consultar la disponibilidad
+                            de libros, textos escolares y recursos multimedia en cualquier momento
+                            y desde cualquier lugar.
+                        </li>
+                        <li>
+                            <strong>Acompañamiento en la Formación:</strong> Contamos con
+                            personal especializado que orienta al estudiante en sus primeras
+                            etapas de investigación y fomenta el hábito de la lectura.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="frase-biblioteca">
+                <p>
+                    "La grandeza de un colegio se mide por la calidad de la información
+                    y la pasión por la lectura que se cultiva en su biblioteca."
+                </p>
+            </div>
+
+            <div class="mision-vision">
+                <div class="card-info">
+                    <h3>Misión de la Biblioteca</h3>
+                    <p>
+                        "Brindar a los usuarios servicios óptimos y de calidad, con personal
+                        calificado e identificado con los principios institucionales,
+                        actualizando constantemente sus recursos de información, empleando
+                        tecnología de vanguardia".
+                    </p>
+                </div>
+
+                <div class="card-info">
+                    <h3>Visión de la Biblioteca</h3>
+                    <p>
+                        "Ser el sistema de información con mayor y mejor acceso a las fuentes
+                        de información disponibles en el ámbito académico, en el marco de una excelente y
+                        destacanda calidad de atención a nuestros usuarios, a través de tecnología de vanguardia
+                        y el mejor equipo de profesionales".
                     </p>
                 </div>
             </div>
-
-            <div class="noticia-card">
-                <img src="/img/img-noticia2.jpg" alt="Noticia 2">
-
-                <div class="noticia-contenido">
-                    <span class="fecha">18 Abril 2026</span>
-                    <h3>Nuevos Libros Disponibles</h3>
-                    <p>
-                        Se incorporaron más de 200 nuevos libros para
-                        fortalecer el aprendizaje estudiantil.
-                    </p>
-                </div>
-            </div>
-
-            <div class="noticia-card">
-                <img src="/img/img-noticia3.png" alt="Noticia 3">
-
-                <div class="noticia-contenido">
-                    <span class="fecha">10 Abril 2026</span>
-                    <h3>Taller de Investigación</h3>
-                    <p>
-                        Se desarrolló un taller dirigido a estudiantes para
-                        mejorar sus habilidades investigativas.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    </section>    
+        </section>
     </main>
-
 
     <footer class="py-5">
         <div class="container">
             <div class="row gy-4">
                 <div class="col-12 col-md-4 d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
 
-                    <div class="footer-logo mb-3"> <img src="img/logo-CVE.png" alt="Logo Colegio Villa Encantada">
+                    <div class="footer-logo mb-3"> <img th:src="@{/img/logo-CVE.png}"
+                            alt="Logo Colegio Villa Encantada">
                     </div>
 
                     <div class="d-flex gap-3 align-items-center"> <a href="#" class="text-decoration-none"> <svg
@@ -146,12 +165,12 @@
                     <h2>Contactos</h2>
                     <p>Rocas 2599, San Juan de Lurigancho 15434</p>
                     <p>Teléfono: 987654321</p>
-                    <p>bibliotrca@gmail.com</p>
+                    <p>biblioteca@gmail.com</p>
                 </div>
 
             </div>
         </div>
     </footer>
-
 </body>
+
 </html>
