@@ -33,12 +33,22 @@
                 <p class="text-light opacity-75">Accede con tus credenciales a tu perfil</p>
             </div>
 
-            <form class="login-form needs-validation" novalidate>
+            <form th:action="@{/login}" method="post" class="login-form needs-validation" novalidate>
+                <div th:if="${param.error}" class="alert alert-danger text-center"
+                    style="background-color: #f8d7da; color: #842029; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 14px;">
+                    Credenciales incorrectas.
+                </div>
+                <div th:if="${param.logout}" class="alert alert-success text-center"
+                    style="background-color: #d1e7dd; color: #0f5132; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 14px;">
+                    Has cerrado sesión exitosamente.
+                </div>
+
                 <div class="input-group">
-                    <label for="codigo">Codigo</label>
-                    <input type="text" id="codigo" name="codigo" required>
+                    <label for="codigo">Código Institucional</label>
+                    <input type="text" id="codigo" name="username" placeholder="Ej: A12345678"
+                        pattern="[A-Za-z][0-9]{8}" maxlength="9" required>
                     <div class="invalid-feedback">
-                        Por favor, ingresa tu código.
+                        Por favor, ingresa un código válido (1 letra y 8 números).
                     </div>
                 </div>
 
