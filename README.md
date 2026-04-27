@@ -49,21 +49,25 @@ Sistema de gestión bibliotecaria completo enfocado al entorno escolar del Coleg
      - Código: A12345678
      - Nombre: Administrador 
      - Rol: ADMINISTRADOR
+     - Contraseña:1234 
 
      **Bibliotecario**
      - Código: B87654321
      - Nombre: Bibliotecario 
      - Rol: BIBLIOTECARIO
+     - Contraseña:1234 
 
      **Profesor**
      - Código: P11223344
      - Nombre: Profesor
      - Rol: PROFESOR
+     - Contraseña:1234 
 
      **Estudiante**
      - Código: E55667788
      - Nombre: Estudiante
      - Rol: ESTUDIANTE
+     - Contraseña:1234 
 
 ## Evidencias
 
