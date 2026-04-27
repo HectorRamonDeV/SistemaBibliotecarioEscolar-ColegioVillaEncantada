@@ -1,6 +1,7 @@
 package sistema_biblioteca.demo.model;
 
 import jakarta.persistence.*;
+import sistema_biblioteca.demo.model.enums.RolUsuario;
 
 @Entity
 @Table(name = "usuarios")
@@ -13,7 +14,10 @@ public class Usuario {
     private String nombre;
     private String codigo;
     private String password;
-    private String rol;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private RolUsuario rol;
 
     public Usuario() {
     }
@@ -46,11 +50,11 @@ public class Usuario {
         this.password = password;
     }
 
-    public String getRol() {
+    public RolUsuario getRol() {
         return rol;
     }
 
-    public void setRol(String rol) {
+    public void setRol(RolUsuario rol) {
         this.rol = rol;
     }
 }
