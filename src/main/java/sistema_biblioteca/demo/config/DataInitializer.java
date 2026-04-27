@@ -18,16 +18,22 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        if (usuarioRepository.findByCodigo("A12345678").isEmpty()) {
-            Usuario admin = new Usuario();
-            admin.setNombre("Administrador Principal");
-            admin.setCodigo("A12345678");
+        crearUsuarioSiNoExiste("A12345678", "Administrador Principal", "ADMINISTRADOR");
+        crearUsuarioSiNoExiste("B87654321", "Bibliotecario Turno Mañana", "BIBLIOTECARIO");
+        crearUsuarioSiNoExiste("P11223344", "Profesor de Literatura", "PROFESOR");
+        crearUsuarioSiNoExiste("E55667788", "Estudiante Regular", "ESTUDIANTE");
+    }
 
-            admin.setPassword(passwordEncoder.encode("1234"));
-            admin.setRol("ADMINISTRADOR");
+    private void crearUsuarioSiNoExiste(String codigo, String nombre, String rol) {
+        if (usuarioRepository.findByCodigo(codigo).isEmpty()) {
+            Usuario usuario = new Usuario();
+            usuario.setNombre(nombre);
+            usuario.setCodigo(codigo);
+            usuario.setPassword(passwordEncoder.encode("1234"));
+            usuario.setRol(rol);
 
-            usuarioRepository.save(admin);
-            System.out.println("Usuario administrador creado por defecto: A12345678 / 1234");
+            usuarioRepository.save(usuario);
+            System.out.println("Usuario de prueba creado -> Código: " + codigo + " | Rol: " + rol);
         }
     }
 }
