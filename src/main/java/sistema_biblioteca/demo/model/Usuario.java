@@ -15,19 +15,42 @@ public class Usuario {
     private String password;
     private String rol;
 
-    public Usuario() {}
+    public Usuario() {
+    }
 
-    public Long getId() { return id; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getNombre() {
+        return nombre;
+    }
 
-    public String getCodigo() { return codigo; }
-    public void setCodigo(String codigo) { this.codigo = codigo; }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
+    public String getCodigo() {
+        return codigo;
+    }
 
-    public String getRol() { return rol; }
-    public void setRol(String rol) { this.rol = rol; }
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
 }
